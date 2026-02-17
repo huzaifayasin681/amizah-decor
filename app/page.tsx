@@ -14,6 +14,9 @@ import {
   Trash2,
   ChevronRight,
   ArrowRight,
+  Mail,
+  Globe,
+  Building2,
 } from "lucide-react";
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -40,7 +43,7 @@ const PRODUCTS: Product[] = [
   {
     id: 1,
     name: "Golden Antler Centerpiece",
-    price: 4500,
+    price: 49,
     category: "Decor",
     image:
       "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=600&fit=crop&q=80",
@@ -50,7 +53,7 @@ const PRODUCTS: Product[] = [
   {
     id: 2,
     name: "Nordic Ceramic Vase Set",
-    price: 3200,
+    price: 35,
     category: "Decor",
     image:
       "https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?w=600&h=600&fit=crop&q=80",
@@ -59,7 +62,7 @@ const PRODUCTS: Product[] = [
   {
     id: 3,
     name: "Crystal Chandelier Lamp",
-    price: 8900,
+    price: 99,
     category: "Lighting",
     image:
       "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?w=600&h=600&fit=crop&q=80",
@@ -69,7 +72,7 @@ const PRODUCTS: Product[] = [
   {
     id: 4,
     name: "Velvet Lounge Chair",
-    price: 15000,
+    price: 169,
     category: "Furniture",
     image:
       "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&h=600&fit=crop&q=80",
@@ -79,7 +82,7 @@ const PRODUCTS: Product[] = [
   {
     id: 5,
     name: "Geometric Wall Mirror",
-    price: 6000,
+    price: 65,
     category: "Wall Art",
     image:
       "https://images.unsplash.com/photo-1618220179428-22790b461013?w=600&h=600&fit=crop&q=80",
@@ -88,7 +91,7 @@ const PRODUCTS: Product[] = [
   {
     id: 6,
     name: "Marble Table Lamp",
-    price: 5500,
+    price: 59,
     category: "Lighting",
     image:
       "https://images.unsplash.com/photo-1507473885765-e6ed057ab6fe?w=600&h=600&fit=crop&q=80",
@@ -97,7 +100,7 @@ const PRODUCTS: Product[] = [
   {
     id: 7,
     name: "Abstract Canvas Trio",
-    price: 7200,
+    price: 79,
     category: "Wall Art",
     image:
       "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&h=600&fit=crop&q=80",
@@ -107,7 +110,7 @@ const PRODUCTS: Product[] = [
   {
     id: 8,
     name: "Rattan Accent Chair",
-    price: 12500,
+    price: 139,
     category: "Furniture",
     image:
       "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=600&h=600&fit=crop&q=80",
@@ -116,7 +119,7 @@ const PRODUCTS: Product[] = [
   {
     id: 9,
     name: "Brass Pendant Light",
-    price: 4800,
+    price: 52,
     category: "Lighting",
     image:
       "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=600&h=600&fit=crop&q=80",
@@ -125,7 +128,7 @@ const PRODUCTS: Product[] = [
   {
     id: 10,
     name: "Woven Macramé Wall Hanging",
-    price: 2800,
+    price: 32,
     category: "Wall Art",
     image:
       "https://images.unsplash.com/photo-1615529328331-f8917597711f?w=600&h=600&fit=crop&q=80",
@@ -172,7 +175,7 @@ const NAV_LINKS = [
    ═══════════════════════════════════════════════════════════════════════════ */
 
 function formatPrice(price: number): string {
-  return `Rs ${price.toLocaleString("en-PK")}`;
+  return `$${price.toLocaleString("en-US", { minimumFractionDigits: 0 })}`;
 }
 
 function StarRating({ rating, size = 14 }: { rating: number; size?: number }) {
@@ -275,7 +278,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-[var(--color-cream)]">
       {/* ───────────── TOP BAR ───────────── */}
       <div className="bg-[var(--color-charcoal)] text-[var(--color-cream)] text-center text-xs sm:text-sm tracking-widest py-2.5 font-[var(--font-body)]">
-        ✦ Free Shipping on Orders Above Rs. 2,500 ✦
+        ✦ Free Shipping on Orders Above $50 — Delivering to USA & UK ✦
       </div>
 
       {/* ───────────── NAVBAR ───────────── */}
@@ -524,7 +527,7 @@ export default function HomePage() {
             {
               Icon: Truck,
               title: "Free Shipping",
-              desc: "Complimentary delivery on all orders above Rs. 2,500 across Pakistan.",
+              desc: "Complimentary delivery on all orders above $50 across the USA & UK.",
             },
             {
               Icon: Shield,
@@ -609,21 +612,59 @@ export default function HomePage() {
           }}
         />
         <div className="absolute inset-0 bg-[var(--color-charcoal)]/85" />
-        <div className="relative z-10 max-w-3xl mx-auto text-center">
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
           <p className="text-[var(--color-gold-light)] text-sm tracking-[0.3em] uppercase mb-4 font-[var(--font-body)]">
-            Our Story
+            About Amizah Group
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 font-[var(--font-heading)] leading-tight">
-            Crafting Elegance
+            International Luxury,
             <br />
-            Since 2018
+            Delivered Worldwide
           </h2>
-          <p className="text-white/70 leading-relaxed mb-10 font-[var(--font-body)]">
-            Amizah Group was born from a passion for transforming living spaces
-            into works of art. We source the finest materials and collaborate
-            with master artisans to bring you décor that tells a story of
-            craftsmanship, heritage, and refined taste.
+          <p className="text-white/70 leading-relaxed mb-8 font-[var(--font-body)] max-w-2xl mx-auto">
+            Amizah Group is an international e-commerce and decor brand focused
+            on modern luxury interiors. The company operates through registered
+            entities in the USA and UK.
           </p>
+
+          {/* Entity cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mx-auto mb-10">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+              <div className="flex items-center justify-center gap-2 mb-3">
+                <Building2 size={18} className="text-[var(--color-gold-light)]" />
+                <h3 className="text-white font-semibold font-[var(--font-heading)] text-lg">Amizah LLC</h3>
+              </div>
+              <div className="flex items-center justify-center gap-2 text-white/50 text-sm mb-1">
+                <Globe size={14} />
+                <span>United States</span>
+              </div>
+              <p className="text-[var(--color-gold-light)] text-sm font-medium font-[var(--font-body)]">
+                EIN: 61-2113718
+              </p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+              <div className="flex items-center justify-center gap-2 mb-3">
+                <Building2 size={18} className="text-[var(--color-gold-light)]" />
+                <h3 className="text-white font-semibold font-[var(--font-heading)] text-lg">Amizah Ltd</h3>
+              </div>
+              <div className="flex items-center justify-center gap-2 text-white/50 text-sm mb-1">
+                <Globe size={14} />
+                <span>United Kingdom</span>
+              </div>
+              <p className="text-[var(--color-gold-light)] text-sm font-medium font-[var(--font-body)]">
+                CRN: 16270535
+              </p>
+            </div>
+          </div>
+
+          {/* Contact */}
+          <div className="flex items-center justify-center gap-2 text-white/60 text-sm mb-8 font-[var(--font-body)]">
+            <Mail size={15} className="text-[var(--color-gold-light)]" />
+            <a href="mailto:jawad@amizahgroup.com" className="hover:text-[var(--color-gold-light)] transition-colors">
+              jawad@amizahgroup.com
+            </a>
+          </div>
+
           <a
             href="#shop"
             className="inline-flex items-center gap-3 border-2 border-[var(--color-gold-light)] text-[var(--color-gold-light)] hover:bg-[var(--color-gold)] hover:border-[var(--color-gold)] hover:text-white px-10 py-4 rounded-full text-sm font-semibold tracking-widest uppercase transition-all duration-300 font-[var(--font-body)]"
@@ -637,7 +678,7 @@ export default function HomePage() {
       {/* ───────────── FOOTER ───────────── */}
       <footer className="bg-[var(--color-charcoal)] text-white/80 pt-16 pb-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-14">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-14">
             {/* Brand */}
             <div>
               <span className="font-[var(--font-heading)] text-2xl text-white font-bold tracking-tight">
@@ -647,12 +688,19 @@ export default function HomePage() {
                 </span>
               </span>
               <p className="mt-4 text-sm leading-relaxed text-white/50 font-[var(--font-body)]">
-                Curating luxury home décor for discerning individuals who value
-                elegance and craftsmanship.
+                International e-commerce and decor brand focused on modern
+                luxury interiors. Operating in the USA & UK.
               </p>
+              <a
+                href="mailto:jawad@amizahgroup.com"
+                className="inline-flex items-center gap-2 mt-4 text-sm text-[var(--color-gold-light)] hover:text-white transition-colors font-[var(--font-body)]"
+              >
+                <Mail size={14} />
+                jawad@amizahgroup.com
+              </a>
             </div>
 
-            {/* Quick Links — all point to real SPA sections */}
+            {/* Quick Links */}
             <div>
               <h4 className="text-sm font-semibold text-white tracking-widest uppercase mb-5 font-[var(--font-heading)]">
                 Quick Links
@@ -671,7 +719,7 @@ export default function HomePage() {
               </ul>
             </div>
 
-            {/* Categories — scroll to shop & activate filter */}
+            {/* Categories */}
             <div>
               <h4 className="text-sm font-semibold text-white tracking-widest uppercase mb-5 font-[var(--font-heading)]">
                 Categories
@@ -690,6 +738,23 @@ export default function HomePage() {
                 ))}
               </ul>
             </div>
+
+            {/* Company Info */}
+            <div>
+              <h4 className="text-sm font-semibold text-white tracking-widest uppercase mb-5 font-[var(--font-heading)]">
+                Company Info
+              </h4>
+              <ul className="space-y-4">
+                <li>
+                  <p className="text-sm text-white/70 font-semibold font-[var(--font-heading)]">Amizah LLC</p>
+                  <p className="text-xs text-white/40 font-[var(--font-body)]">United States · EIN: 61-2113718</p>
+                </li>
+                <li>
+                  <p className="text-sm text-white/70 font-semibold font-[var(--font-heading)]">Amizah Ltd</p>
+                  <p className="text-xs text-white/40 font-[var(--font-body)]">United Kingdom · CRN: 16270535</p>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* Divider + copyright */}
@@ -698,7 +763,7 @@ export default function HomePage() {
               © 2026 Amizah Group. All rights reserved.
             </p>
             <p className="text-xs text-white/40 tracking-wide font-[var(--font-body)]">
-              Crafted with ♥ in Pakistan
+              Operational in USA & UK
             </p>
           </div>
         </div>
@@ -810,7 +875,7 @@ export default function HomePage() {
                     {formatPrice(cartTotal)}
                   </span>
                 </div>
-                {cartTotal >= 2500 && (
+                {cartTotal >= 50 && (
                   <p className="text-xs text-green-600 text-center mb-3 font-[var(--font-body)]">
                     ✦ You qualify for free shipping!
                   </p>
