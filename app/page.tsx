@@ -17,6 +17,7 @@ import {
   Mail,
   Globe,
   Building2,
+  Phone,
 } from "lucide-react";
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -634,34 +635,32 @@ export default function HomePage() {
                 <Building2 size={18} className="text-[var(--color-gold-light)]" />
                 <h3 className="text-white font-semibold font-[var(--font-heading)] text-lg">Amizah LLC</h3>
               </div>
-              <div className="flex items-center justify-center gap-2 text-white/50 text-sm mb-1">
+              <div className="flex items-center justify-center gap-2 text-white/50 text-sm">
                 <Globe size={14} />
                 <span>United States</span>
               </div>
-              <p className="text-[var(--color-gold-light)] text-sm font-medium font-[var(--font-body)]">
-                EIN: 61-2113718
-              </p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <div className="flex items-center justify-center gap-2 mb-3">
                 <Building2 size={18} className="text-[var(--color-gold-light)]" />
                 <h3 className="text-white font-semibold font-[var(--font-heading)] text-lg">Amizah Ltd</h3>
               </div>
-              <div className="flex items-center justify-center gap-2 text-white/50 text-sm mb-1">
+              <div className="flex items-center justify-center gap-2 text-white/50 text-sm">
                 <Globe size={14} />
                 <span>United Kingdom</span>
               </div>
-              <p className="text-[var(--color-gold-light)] text-sm font-medium font-[var(--font-body)]">
-                CRN: 16270535
-              </p>
             </div>
           </div>
 
           {/* Contact */}
-          <div className="flex items-center justify-center gap-2 text-white/60 text-sm mb-8 font-[var(--font-body)]">
-            <Mail size={15} className="text-[var(--color-gold-light)]" />
-            <a href="mailto:jawad@amizahgroup.com" className="hover:text-[var(--color-gold-light)] transition-colors">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-white/60 text-sm mb-8 font-[var(--font-body)]">
+            <a href="mailto:jawad@amizahgroup.com" className="inline-flex items-center gap-2 hover:text-[var(--color-gold-light)] transition-colors">
+              <Mail size={15} className="text-[var(--color-gold-light)]" />
               jawad@amizahgroup.com
+            </a>
+            <a href="tel:+971544770758" className="inline-flex items-center gap-2 hover:text-[var(--color-gold-light)] transition-colors">
+              <Phone size={15} className="text-[var(--color-gold-light)]" />
+              +971 544 770 758
             </a>
           </div>
 
@@ -697,6 +696,13 @@ export default function HomePage() {
               >
                 <Mail size={14} />
                 jawad@amizahgroup.com
+              </a>
+              <a
+                href="tel:+971544770758"
+                className="inline-flex items-center gap-2 mt-2 text-sm text-[var(--color-gold-light)] hover:text-white transition-colors font-[var(--font-body)]"
+              >
+                <Phone size={14} />
+                +971 544 770 758
               </a>
             </div>
 
@@ -747,11 +753,11 @@ export default function HomePage() {
               <ul className="space-y-4">
                 <li>
                   <p className="text-sm text-white/70 font-semibold font-[var(--font-heading)]">Amizah LLC</p>
-                  <p className="text-xs text-white/40 font-[var(--font-body)]">United States · EIN: 61-2113718</p>
+                  <p className="text-xs text-white/40 font-[var(--font-body)]">United States</p>
                 </li>
                 <li>
                   <p className="text-sm text-white/70 font-semibold font-[var(--font-heading)]">Amizah Ltd</p>
-                  <p className="text-xs text-white/40 font-[var(--font-body)]">United Kingdom · CRN: 16270535</p>
+                  <p className="text-xs text-white/40 font-[var(--font-body)]">United Kingdom</p>
                 </li>
               </ul>
             </div>
